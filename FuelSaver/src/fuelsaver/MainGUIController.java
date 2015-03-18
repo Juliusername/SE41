@@ -56,6 +56,21 @@ public class MainGUIController implements Initializable {
             case WACHTWOORDWIJZIGEN:
                 goToWachtwoordWijzigen();
                 break;
+            case TABS:
+                goToTabs();
+                break;
+            case CHANGECAR:
+                goToChangeCar();
+                break;
+            case CHANGEGASSTATIONS:
+                goToChangeGasStations();
+                break;
+            case OVERVIEW:
+                goToOverview();
+                break;
+            case REGISTER:
+                goToRegister();
+                break;
             default:
                 goToLogin();
                 break;
@@ -88,5 +103,35 @@ public class MainGUIController implements Initializable {
         this.currentScene = Scenes.WACHTWOORDWIJZIGEN;
         FXMLLoader fxmlLoader = this.replaceContent("WachtwoordWijzigenGUI.fxml");
         ((WachtwoordWijzigenController)fxmlLoader.getController()).setValues(this);
+    }
+    
+    public void goToTabs() {
+        this.currentScene = Scenes.TABS;
+        FXMLLoader fxmlLoader = this.replaceContent("TabsGUI.fxml");
+        ((TabsGUIController) fxmlLoader.getController()).setValues(this);
+    }
+    
+    public void goToChangeCar() {
+        this.currentScene = Scenes.CHANGECAR;
+        FXMLLoader fxmlLoader = this.replaceContent("ChangeCarGUI.fxml");
+        ((ChangeCarGUIController) fxmlLoader.getController()).setValues(this);
+    }
+    
+    public void goToChangeGasStations() {
+        this.currentScene = Scenes.CHANGEGASSTATIONS;
+        FXMLLoader fxmlLoader = this.replaceContent("ChangeGasStationsGUI.fxml");
+        ((ChangeGasStationsGUIController) fxmlLoader.getController()).setValues(this);
+    }
+    
+    public void goToOverview() {
+        this.currentScene = Scenes.OVERVIEW;
+        FXMLLoader fxmlLoader = this.replaceContent("OverviewGUI.fxml");
+        ((OverviewGUIController) fxmlLoader.getController()).setValues(this);
+    }
+    
+    public void goToRegister() {
+        this.currentScene = Scenes.REGISTER;
+        FXMLLoader fxmlLoader = this.replaceContent("RegisterGUI.fxml");
+        ((RegisterGUIController) fxmlLoader.getController()).setValues(this);
     }
 }

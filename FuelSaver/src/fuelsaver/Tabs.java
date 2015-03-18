@@ -9,12 +9,8 @@ package fuelsaver;
  *
  * @author Alexander
  */
-public enum Scenes {
-    LOGIN,
-    REGISTER,
-    WACHTWOORDWIJZIGEN,
-    TABS,
-    CHANGECAR,
-    CHANGEGASSTATIONS,
-    OVERVIEW
+public enum Tabs {
+    CALCULATE,
+    SETTINGS,
+    NONE
 }

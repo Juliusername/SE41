@@ -14,14 +14,14 @@
         <AnchorPane fx:id="apContent" minHeight="0.0" minWidth="0.0" prefHeight="116.0" prefWidth="190.0" />
       </center>
       <top>
-        <AnchorPane fx:id="apHeader" minHeight="0.0" minWidth="0.0" prefHeight="46.0" prefWidth="600.0">
+        <AnchorPane fx:id="apHeader" minHeight="0.0" minWidth="0.0" prefHeight="26.0" prefWidth="600.0">
           <children>
-            <ImageView fitHeight="30.63060806046671" fitWidth="47.0" layoutX="482.0" layoutY="8.0" onMouseClicked="#changeEnglish" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="20.854881773603722" fitWidth="32.0" layoutX="515.0" layoutY="3.0" onMouseClicked="#changeEnglish" pickOnBounds="true" preserveRatio="true">
               <image>
                 <Image url="@../images/english.png" />
               </image>
             </ImageView>
-            <ImageView fitHeight="31.33332915952806" fitWidth="46.99999237060547" layoutX="539.0" layoutY="7.0" onMouseClicked="#changeDutch" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="21.333328247070312" fitWidth="31.99999237060547" layoutX="559.0" layoutY="3.0" onMouseClicked="#changeDutch" pickOnBounds="true" preserveRatio="true">
               <image>
                 <Image url="@../images/nederlands.png" />
               </image>

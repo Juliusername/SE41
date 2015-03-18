@@ -6,34 +6,27 @@
 package fuelsaver;
 
 import java.net.URL;
-import java.util.Locale;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
 
 /**
+ * FXML Controller class
  *
  * @author Alexander
  */
-public class LoginGUIController implements Initializable {
-    
-    @FXML
-    private Label label;
-    
+public class OverviewGUIController implements Initializable {
     private MainGUIController mainGUI;
-    
+
+    /**
+     * Initializes the controller class.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-    }   
+        // TODO
+    }    
     
     public void setValues(MainGUIController mainGUI) {
         this.mainGUI = mainGUI;
     }
     
-    public void login() {
-        this.mainGUI.goToTabs();
-    }
 }
