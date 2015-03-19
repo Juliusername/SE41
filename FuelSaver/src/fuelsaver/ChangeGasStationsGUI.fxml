@@ -6,6 +6,21 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fuelsaver.ChangeGasStationsGUIController">
-    
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="fuelsaver.ChangeGasStationsGUIController">
+  <children>
+    <Button id="BTreturnmenu" layoutX="46.0" layoutY="328.0" mnemonicParsing="false" onAction="#Gotoinstellingen" text="%returninstellingen" />
+    <Label fx:id="LBaddgasstation" layoutX="46.0" layoutY="99.0" text="%addgasstation" />
+    <Label fx:id="LBngasstationname" layoutX="46.0" layoutY="136.0" text="%tankstationname" />
+    <Label fx:id="LBlocatie" layoutX="46.0" layoutY="167.0" text="%tankstationlocation" />
+    <Label id="LBPrijs" fx:id="LBprijs" layoutX="46.0" layoutY="204.0" text="%tankstationprice" />
+    <TextField fx:id="TFtankstationname" layoutX="198.0" layoutY="130.0" prefWidth="143.0" />
+    <TextField fx:id="TFtanksationlocation" layoutX="198.0" layoutY="167.0" prefWidth="143.0" />
+    <TextField fx:id="TFtankstationprice" layoutX="198.0" layoutY="201.0" prefWidth="143.0" />
+    <Button id="Btaddcar" fx:id="BTaddgasstation" layoutX="199.0" layoutY="240.0" mnemonicParsing="false" prefWidth="143.0" text="%addgasstation" />
+    <ListView id="LVcarlist" fx:id="LVgasstations" layoutX="354.0" layoutY="127.0" prefHeight="95.00009999999747" prefWidth="200.0" />
+    <Label fx:id="LBremovegasstation" layoutX="354.0" layoutY="99.0" text="%tankstationremove" />
+    <Label id="LBTitel" fx:id="LBgasstationconfiguration" layoutX="46.0" layoutY="50.0" text="%gasstationconfigstation" />
+    <Button id="Btaddcar" fx:id="BTremovegasstation" layoutX="398.0" layoutY="240.0" mnemonicParsing="false" prefWidth="156.0" text="%tankstationremove" />
+    <Button id="BTupdatecar" fx:id="BTupdategasstation" layoutX="46.0" layoutY="241.0" mnemonicParsing="false" text="%tankstationupdate" />
+  </children>
 </AnchorPane>

@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
@@ -26,7 +27,10 @@ public class ChangeCarGUIController implements Initializable {
     @FXML Button BTreturnmenu;
     @FXML Button Btaddcar;
     @FXML Button Btremovecar;
-    @FXML Label configstation;
+    @FXML TextField TFbrand;
+    @FXML TextField TFtype;
+    @FXML TextField TFfuealusage;
+    
     /**
      * Initializes the controller class.
      */

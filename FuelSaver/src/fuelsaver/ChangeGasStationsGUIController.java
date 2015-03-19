@@ -7,7 +7,11 @@ package fuelsaver;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
@@ -17,13 +21,27 @@ import javafx.fxml.Initializable;
 public class ChangeGasStationsGUIController implements Initializable {
     private MainGUIController mainGUI;
 
+    
+    @FXML ListView LVgasstations;
+    @FXML Button BTupdategasstation;
+    @FXML Button BTaddgasstation;
+    @FXML Button BTremovegasstation;
+    @FXML TextField TFtankstationname;
+    @FXML TextField TFtanksationlocation;
+    @FXML TextField TFtankstationprice;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        this.LVgasstations.getItems().add("Texaco Eindhoven");
+        this.LVgasstations.getItems().add("Shell Eindhoven");
     }    
+    
+    public void Gotoinstellingen()
+    {
+        this.mainGUI.goToTabs();
+    }
     
     public void setValues(MainGUIController mainGUI) {
         this.mainGUI = mainGUI;
