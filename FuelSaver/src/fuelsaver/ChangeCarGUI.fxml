@@ -6,6 +6,21 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fuelsaver.ChangeCarGUIController">
-    
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="fuelsaver.ChangeCarGUIController">
+  <children>
+    <Button fx:id="BTreturnmenu" layoutX="32.0" layoutY="292.0" mnemonicParsing="false" onAction="#Gotoinstellingen" text="%returninstellingen" />
+    <Label layoutX="32.0" layoutY="63.0" text="%addauto" />
+    <Label layoutX="32.0" layoutY="100.0" text="%brand" />
+    <Label layoutX="32.0" layoutY="131.0" text="%type" />
+    <Label layoutX="32.0" layoutY="168.0" text="%fuelusage" />
+    <TextField layoutX="141.0" layoutY="97.0" prefWidth="131.0" />
+    <TextField layoutX="141.0" layoutY="131.0" prefWidth="131.0" />
+    <TextField layoutX="141.0" layoutY="165.0" prefWidth="131.0" />
+    <Button fx:id="Btaddcar" layoutX="148.0" layoutY="205.0" mnemonicParsing="false" prefWidth="117.0" text="%addauto" />
+    <ListView fx:id="LVcarlist" layoutX="340.0" layoutY="91.0" prefHeight="95.00009999999747" prefWidth="200.0" />
+    <Label layoutX="340.0" layoutY="63.0" text="%removeauto" />
+    <Label fx:id="LBTitel" layoutX="32.0" layoutY="14.0" text="%configstation" />
+    <Button id="Btaddcar" fx:id="Btremovecar" layoutX="409.0" layoutY="204.0" mnemonicParsing="false" prefWidth="131.0" text="%removeauto" />
+    <Button fx:id="BTupdatecar" layoutX="32.0" layoutY="205.0" mnemonicParsing="false" text="%updatecar" />
+  </children>
 </AnchorPane>
