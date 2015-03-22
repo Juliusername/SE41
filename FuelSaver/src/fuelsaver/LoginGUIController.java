@@ -19,9 +19,7 @@ import javafx.scene.control.Label;
  */
 public class LoginGUIController implements Initializable {
     
-    @FXML
-    private Label label;
-    
+   
     private MainGUIController mainGUI;
     
     @Override
@@ -35,5 +33,10 @@ public class LoginGUIController implements Initializable {
     
     public void login() {
         this.mainGUI.goToTabs();
+    }
+    
+    public void goToRegister()
+    {
+        this.mainGUI.goToRegister();
     }
 }

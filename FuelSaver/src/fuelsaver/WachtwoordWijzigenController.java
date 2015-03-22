@@ -26,7 +26,12 @@ public class WachtwoordWijzigenController {
         this.mainGUI = mainGUI;
     }
     
-    public void backToLogin() {
+    public void backToTabs() {
+        this.mainGUI.goToTabs();
+    }
+    
+    public void savePassword()
+    {
         this.mainGUI.goToLogin();
     }
 }

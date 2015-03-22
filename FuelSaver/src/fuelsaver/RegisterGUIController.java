@@ -29,4 +29,13 @@ public class RegisterGUIController implements Initializable {
         this.mainGUI = mainGUI;
     }
     
+    public void goToLogin()
+    {
+        this.mainGUI.goToLogin();
+    }
+    
+    public void register()
+    {
+        this.mainGUI.goToLogin();;
+    }
 }
