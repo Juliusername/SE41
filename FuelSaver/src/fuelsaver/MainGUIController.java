@@ -7,6 +7,7 @@
 package fuelsaver;
 
 import fuelsaver.LoginGUIController;
+import java.awt.Desktop;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Locale;
@@ -20,6 +21,7 @@ import javafx.fxml.Initializable;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 /**
  *
@@ -27,7 +29,7 @@ import javafx.scene.layout.AnchorPane;
  */
 public class MainGUIController implements Initializable {
     @FXML
-    private AnchorPane apContent;
+    public AnchorPane apContent;
     
     private Locale language;
     private Scenes currentScene;
@@ -125,6 +127,7 @@ public class MainGUIController implements Initializable {
     
     public void goToOverview() {
         this.currentScene = Scenes.OVERVIEW;
+        //this.apContent.getScene().
         FXMLLoader fxmlLoader = this.replaceContent("OverviewGUI.fxml");
         ((OverviewGUIController) fxmlLoader.getController()).setValues(this);
     }
@@ -133,5 +136,11 @@ public class MainGUIController implements Initializable {
         this.currentScene = Scenes.REGISTER;
         FXMLLoader fxmlLoader = this.replaceContent("RegisterGUI.fxml");
         ((RegisterGUIController) fxmlLoader.getController()).setValues(this);
+    }
+    
+    public void resizeHeight(int height)
+    {
+        Stage stage = (Stage) this.apContent.getScene().getWindow();
+        stage.setHeight(height);
     }
 }
