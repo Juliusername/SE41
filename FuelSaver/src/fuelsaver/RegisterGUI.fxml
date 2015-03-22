@@ -17,7 +17,7 @@
       <Label fx:id="lblUsername" layoutX="14.0" layoutY="66.0" text="%lblUsername" />
       <Label fx:id="lblPassword" layoutX="14.0" layoutY="103.0" text="%lblPassword" />
       <Button fx:id="btnBack" layoutX="14.0" layoutY="174.0" mnemonicParsing="false" onAction="#goToLogin" text="%btnBack" />
-      <Button fx:id="btnRegister" layoutX="253.0" layoutY="174.0" mnemonicParsing="false" onAction="#register" text="%btnRegister" />
+      <Button fx:id="btnRegister" layoutX="253.0" layoutY="174.0" mnemonicParsing="false" onAction="#register" text="%btnRegister" AnchorPane.rightAnchor="8.0" />
       <Label fx:id="lblPassword1" layoutX="14.0" layoutY="141.0" text="%lblRepeatPassword" />
       <TextField fx:id="tfUsername" layoutX="173.0" layoutY="61.0" prefHeight="31.0" prefWidth="190.0" />
       <PasswordField fx:id="pwPassword" layoutX="173.0" layoutY="98.0" prefHeight="31.0" prefWidth="190.0" />
