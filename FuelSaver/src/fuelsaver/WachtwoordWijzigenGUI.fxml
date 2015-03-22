@@ -7,20 +7,20 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="215.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fuelsaver.WachtwoordWijzigenController">
+<AnchorPane id="AnchorPane" prefHeight="215.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fuelsaver.WachtwoordWijzigenController">
    <children>
-      <Label fx:id="lblChangePassword" layoutX="14.0" layoutY="8.0" text="Change password">
+      <Label fx:id="lblChangePassword" layoutX="14.0" layoutY="8.0" text="%lblChangePassword">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="lblOldPassword" layoutX="14.0" layoutY="66.0" text="Old Password:" />
-      <Label fx:id="lblNewPassword" layoutX="14.0" layoutY="103.0" text="New Password:" />
-      <Button fx:id="btnCancel" layoutX="14.0" layoutY="174.0" mnemonicParsing="false" onAction="#backToTabs" text="Cancel" />
-      <Button fx:id="btnChangePassword" layoutX="291.0" layoutY="174.0" mnemonicParsing="false" onAction="#savePassword" text="Save" />
-      <Label fx:id="lblRepeatPassword" layoutX="14.0" layoutY="141.0" text="Repeat Password:" />
-      <PasswordField fx:id="pwNewPassword" layoutX="152.0" layoutY="98.0" prefHeight="31.0" prefWidth="190.0" />
-      <PasswordField fx:id="pwRepeatPassword" layoutX="152.0" layoutY="136.0" prefHeight="31.0" prefWidth="190.0" />
-      <PasswordField fx:id="pwOldPassword" layoutX="152.0" layoutY="61.0" prefHeight="31.0" prefWidth="190.0" />
+      <Label fx:id="lblOldPassword" layoutX="14.0" layoutY="66.0" text="%lblOldPassword" />
+      <Label fx:id="lblNewPassword" layoutX="14.0" layoutY="103.0" text="%lblNewPassword" />
+      <Button fx:id="btnCancel" layoutX="14.0" layoutY="174.0" mnemonicParsing="false" onAction="#backToTabs" text="%btnCancel" />
+      <Button fx:id="btnSave" layoutX="270.0" layoutY="174.0" mnemonicParsing="false" onAction="#savePassword" text="%btnSave" />
+      <Label fx:id="lblRepeatPassword" layoutX="14.0" layoutY="141.0" text="%lblRepeatPassword" />
+      <PasswordField fx:id="pwNewPassword" layoutX="166.0" layoutY="98.0" prefHeight="31.0" prefWidth="190.0" />
+      <PasswordField fx:id="pwRepeatPassword" layoutX="166.0" layoutY="136.0" prefHeight="31.0" prefWidth="190.0" />
+      <PasswordField fx:id="pwOldPassword" layoutX="166.0" layoutY="61.0" prefHeight="31.0" prefWidth="190.0" />
    </children>
 </AnchorPane>

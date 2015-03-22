@@ -6,12 +6,13 @@
 package fuelsaver;
 
 import java.net.URL;
-import java.util.Locale;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 
 /**
  *
@@ -21,6 +22,14 @@ public class LoginGUIController implements Initializable {
     
    
     private MainGUIController mainGUI;
+    
+    @FXML Label lblLogin;
+    @FXML Label lblUsername;
+    @FXML Label lblPassword;
+    @FXML TextField tfUsername;
+    @FXML PasswordField tfPassword;
+    @FXML Button btnRegister;
+    @FXML Button btnLogin;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

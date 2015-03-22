@@ -8,17 +8,17 @@
 <?import javafx.scene.layout.*?>
 <?scenebuilder-preview-i18n-resource ../resources/lang_ko.properties?>
 
-<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fuelsaver.LoginGUIController">
+<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fuelsaver.LoginGUIController">
   <children>
-    <Label fx:id="lblLogin" layoutX="18.0" layoutY="11.0" minHeight="16.0" minWidth="69.0" text="Login">
+    <Label fx:id="lblLogin" layoutX="18.0" layoutY="11.0" minHeight="16.0" minWidth="69.0" text="%lblLogin">
          <font>
             <Font size="36.0" />
          </font></Label>
-    <Button fx:id="btnLogin" layoutX="249.0" layoutY="142.0" mnemonicParsing="false" onAction="#login" text="Login" AnchorPane.bottomAnchor="27.0" />
-      <Button fx:id="btnRegistreren" layoutX="18.0" layoutY="142.0" mnemonicParsing="false" onAction="#goToRegister" text="Register" />
-      <Label fx:id="lblUsername" layoutX="16.0" layoutY="69.0" text="Username:" />
-      <Label fx:id="lblPassword" layoutX="18.0" layoutY="107.0" text="Password:" />
-      <TextField fx:id="tbUsername" layoutX="113.0" layoutY="64.0" prefHeight="31.0" prefWidth="193.0" />
-      <PasswordField fx:id="pwPassword" layoutX="113.0" layoutY="102.0" prefHeight="31.0" prefWidth="193.0" />
+    <Button fx:id="btnLogin" layoutX="236.0" layoutY="141.0" mnemonicParsing="false" onAction="#login" text="%btnLogin" AnchorPane.bottomAnchor="28.0" />
+      <Button fx:id="btnRegister" layoutX="18.0" layoutY="142.0" mnemonicParsing="false" onAction="#goToRegister" text="%btnRegister" />
+      <Label fx:id="lblUsername" layoutX="20.0" layoutY="69.0" text="%lblUsername" />
+      <Label fx:id="lblPassword" layoutX="18.0" layoutY="107.0" text="%lblPassword" />
+      <TextField fx:id="tfUsername" layoutX="135.0" layoutY="63.0" prefHeight="31.0" prefWidth="193.0" />
+      <PasswordField fx:id="pwPassword" layoutX="135.0" layoutY="101.0" prefHeight="31.0" prefWidth="193.0" />
   </children>
 </AnchorPane>

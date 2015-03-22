@@ -7,20 +7,20 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="215.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fuelsaver.RegisterGUIController">
+<AnchorPane id="AnchorPane" prefHeight="215.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fuelsaver.RegisterGUIController">
    <children>
-      <Label fx:id="lblRegister" layoutX="14.0" layoutY="8.0" text="Register">
+      <Label fx:id="lblRegister" layoutX="14.0" layoutY="8.0" text="%lblRegister">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="lblUsername" layoutX="14.0" layoutY="66.0" text="Username:" />
-      <Label fx:id="lblPassword" layoutX="14.0" layoutY="103.0" text="Password:" />
-      <Button fx:id="btnBack" layoutX="14.0" layoutY="174.0" mnemonicParsing="false" onAction="#goToLogin" text="Back" />
-      <Button fx:id="btnRegister" layoutX="268.0" layoutY="174.0" mnemonicParsing="false" onAction="#register" text="Register" />
-      <Label fx:id="lblPassword1" layoutX="14.0" layoutY="141.0" text="Repeat Password:" />
-      <TextField fx:id="tfUsername" layoutX="152.0" layoutY="61.0" prefHeight="31.0" prefWidth="190.0" />
-      <PasswordField fx:id="pwPassword" layoutX="152.0" layoutY="98.0" prefHeight="31.0" prefWidth="190.0" />
-      <PasswordField fx:id="pwRepeatPassword" layoutX="152.0" layoutY="136.0" prefHeight="31.0" prefWidth="190.0" />
+      <Label fx:id="lblUsername" layoutX="14.0" layoutY="66.0" text="%lblUsername" />
+      <Label fx:id="lblPassword" layoutX="14.0" layoutY="103.0" text="%lblPassword" />
+      <Button fx:id="btnBack" layoutX="14.0" layoutY="174.0" mnemonicParsing="false" onAction="#goToLogin" text="%btnBack" />
+      <Button fx:id="btnRegister" layoutX="253.0" layoutY="174.0" mnemonicParsing="false" onAction="#register" text="%btnRegister" />
+      <Label fx:id="lblPassword1" layoutX="14.0" layoutY="141.0" text="%lblRepeatPassword" />
+      <TextField fx:id="tfUsername" layoutX="173.0" layoutY="61.0" prefHeight="31.0" prefWidth="190.0" />
+      <PasswordField fx:id="pwPassword" layoutX="173.0" layoutY="98.0" prefHeight="31.0" prefWidth="190.0" />
+      <PasswordField fx:id="pwRepeatPassword" layoutX="173.0" layoutY="136.0" prefHeight="31.0" prefWidth="190.0" />
    </children>
 </AnchorPane>
