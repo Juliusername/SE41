@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -37,7 +38,12 @@ public class LoginGUIController implements Initializable {
     }   
     
     public void setValues(MainGUIController mainGUI) {
-        this.mainGUI = mainGUI;
+        Person p = mainGUI.getPerson();
+        if(p.getUsername().equals(tfUsername.getText()) && p.getPassword().equals(tfPassword.getText())) {
+            this.mainGUI = mainGUI;
+        } else {
+            JOptionPane.showMessageDialog(null, "Uw inloggegevens zijn onjuist.");
+        }
     }
     
     public void login() {

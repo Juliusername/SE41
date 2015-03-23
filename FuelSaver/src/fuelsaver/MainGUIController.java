@@ -34,6 +34,8 @@ public class MainGUIController implements Initializable {
     private Locale language;
     private Scenes currentScene;
     
+    private Person person;
+    
     /**
      * Initializes the controller class.
      */
@@ -42,6 +44,10 @@ public class MainGUIController implements Initializable {
         this.language = Locale.KOREAN;
         goToLogin();
     }   
+    
+    public Person getPerson() {
+        return this.person;
+    }
     
     public void changeDutch() {
         this.language = Locale.KOREAN;
