@@ -20,7 +20,11 @@
                 <Label labelFor="$tfStartPosition" layoutX="59.0" layoutY="56.0" text="%lblStartPosition" />
                 <Label labelFor="$tfEndPosition" layoutX="59.0" layoutY="93.0" text="%lblEndPosition" />
                 <CheckBox fx:id="chbCompare" layoutX="164.0" layoutY="131.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="200.0" text="%chbCompare" />
-                <Button layoutX="164.0" layoutY="169.0" mnemonicParsing="false" onAction="#calculate" prefHeight="64.0" prefWidth="200.0" text="%btnCalculate" />
+                <Button layoutX="164.0" layoutY="169.0" mnemonicParsing="false" onAction="#calculate" prefHeight="64.0" prefWidth="200.0" text="%btnCalculate">
+                  <font>
+                    <Font size="20.0" />
+                  </font>
+                </Button>
               </children>
             </AnchorPane>
           </content>

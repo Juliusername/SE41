@@ -7,7 +7,11 @@ package fuelsaver;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -15,6 +19,10 @@ import javafx.fxml.Initializable;
  * @author Alexander
  */
 public class RegisterGUIController implements Initializable {
+    @FXML TextField tfUsername;
+    @FXML PasswordField pwPassword;
+    @FXML PasswordField pwRepeatPassword;
+    
     private MainGUIController mainGUI;
 
     /**
@@ -36,6 +44,17 @@ public class RegisterGUIController implements Initializable {
     
     public void register()
     {
+        try {
+            if(tfUsername.getText() == null || pwPassword.getText() == null || pwRepeatPassword.getText() == null) {
+                throw new IllegalArgumentException("%incomplete");
+            }
+            if(!pwPassword.getText().equals(pwRepeatPassword.getText())) {
+                throw new IllegalArgumentException("%passwordsEx");
+            }
+        } catch(IllegalArgumentException iaEx) {
+            JOptionPane.showMessageDialog(null, iaEx.getMessage());
+        }
+        mainGUI.setPerson(new Person(tfUsername.getText(), pwPassword.getText()));
         this.mainGUI.goToLogin();;
     }
 }

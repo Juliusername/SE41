@@ -16,13 +16,17 @@ public class Person {
     private String username;
     private String password;
     private Car car;
-    private List<Gasstation> gasstations;
+    private List<GasStation> gasstations;
     
-    public Person() {
-        this.username = "Henkie94";
-        this.password = "pizza";
+    public Person(String username, String password) {
+        this.username = username;
+        this.password = password;
         this.car = null;
         this.gasstations = new ArrayList<>();
+    }
+    
+    public Person() {
+        this("Henkie94", "pizza");
     }
 
     public String getUsername() {
@@ -41,15 +45,15 @@ public class Person {
         this.car = car;
     }
 
-    public List<Gasstation> getGasstations() {
+    public List<GasStation> getGasstations() {
         return gasstations;
     }
 
-    public void addGasstation(Gasstation gasstation) {
+    public void addGasstation(GasStation gasstation) {
         this.gasstations.add(gasstation);
     }
     
-    public void removeGasstation(Gasstation gasstation) {
+    public void removeGasstation(GasStation gasstation) {
         this.gasstations.remove(gasstation);
     }
 }

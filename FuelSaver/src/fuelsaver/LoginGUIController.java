@@ -38,20 +38,19 @@ public class LoginGUIController implements Initializable {
     }   
     
     public void setValues(MainGUIController mainGUI) {
-        Person p = mainGUI.getPerson();
-        if(p.getUsername().equals(tfUsername.getText()) && p.getPassword().equals(tfPassword.getText())) {
-            this.mainGUI = mainGUI;
-        } else {
-            JOptionPane.showMessageDialog(null, "Uw inloggegevens zijn onjuist.");
-        }
+        this.mainGUI = mainGUI;
     }
     
     public void login() {
-        this.mainGUI.goToTabs();
+        Person p = mainGUI.getPerson();
+        if(p.getUsername().equals(tfUsername.getText()) && p.getPassword().equals(tfPassword.getText())) {
+            this.mainGUI.goToTabs();
+        } else {
+            JOptionPane.showMessageDialog(null, "%incorrectSignin");
+        }
     }
     
-    public void goToRegister()
-    {
+    public void goToRegister() {
         this.mainGUI.goToRegister();
     }
 }

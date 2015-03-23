@@ -49,6 +49,10 @@ public class MainGUIController implements Initializable {
         return this.person;
     }
     
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+    
     public void changeDutch() {
         this.language = Locale.KOREAN;
         refreshLanguage();
