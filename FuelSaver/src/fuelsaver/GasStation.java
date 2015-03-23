@@ -85,4 +85,10 @@ public class GasStation {
         return false;
     }
     
+    @Override
+    public String toString()
+    {
+      return "Name: " + this.getGasStationname() + "Location: " + this.getGasStationlocation() + "Price: " + this.getGasStationprice();
+    }
+    
 }

@@ -56,4 +56,5 @@ public class Person {
     public void removeGasstation(GasStation gasstation) {
         this.gasstations.remove(gasstation);
     }
+        
 }
