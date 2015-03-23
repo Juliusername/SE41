@@ -32,6 +32,10 @@ public class Car {
         this.brand = brand;
     }
 
+    public ArrayList<Car> getCars() {
+        return Cars;
+    }
+
     public String getType() {
         return type;
     }
