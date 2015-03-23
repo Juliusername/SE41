@@ -43,6 +43,7 @@ public class MainGUIController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         this.language = Locale.KOREAN;
         goToLogin();
+        this.person = new Person();
     }   
     
     public Person getPerson() {

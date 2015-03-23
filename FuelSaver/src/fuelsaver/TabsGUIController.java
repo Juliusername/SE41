@@ -61,14 +61,23 @@ public class TabsGUIController implements Initializable {
                 tabPane.getSelectionModel().select(tabSettings);
                 break;
             default:
-                //TODO
+                Person p = mainGUI.getPerson();
+                if(p.getCar() == null || p.getGasstations().size() <= 0) {
+                    tabPane.getSelectionModel().select(tabSettings);
+                } else {
+                    tabPane.getSelectionModel().select(tabCalculate);
+                }
                 break;
         }
         initialized = true;
-        lblUsername.setText("Henkie94");
-        tfCurrentCar.setText("Chevrolet Kalos");
-        lvCurrentGasStations.getItems().add("Texaco Eindhoven");
-        lvCurrentGasStations.getItems().add("Shell Eindhoven");
+        Person p = mainGUI.getPerson();
+        lblUsername.setText(p.getUsername());
+        if(p.getCar() != null) {
+            tfCurrentCar.setText(p.getCar().toString());
+        }
+        for(GasStation g : p.getGasstations()) {
+            lvCurrentGasStations.getItems().add(g.toString());
+        }
     }
     
     public void selectTab() {

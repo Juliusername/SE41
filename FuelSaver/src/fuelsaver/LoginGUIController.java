@@ -28,7 +28,7 @@ public class LoginGUIController implements Initializable {
     @FXML Label lblUsername;
     @FXML Label lblPassword;
     @FXML TextField tfUsername;
-    @FXML PasswordField tfPassword;
+    @FXML PasswordField pwPassword;
     @FXML Button btnRegister;
     @FXML Button btnLogin;
     
@@ -43,7 +43,7 @@ public class LoginGUIController implements Initializable {
     
     public void login() {
         Person p = mainGUI.getPerson();
-        if(p.getUsername().equals(tfUsername.getText()) && p.getPassword().equals(tfPassword.getText())) {
+        if(p.getUsername().equals(tfUsername.getText()) && p.getPassword().equals(pwPassword.getText())) {
             this.mainGUI.goToTabs();
         } else {
             JOptionPane.showMessageDialog(null, "%incorrectSignin");
