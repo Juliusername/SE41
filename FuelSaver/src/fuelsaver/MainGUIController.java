@@ -54,13 +54,17 @@ public class MainGUIController implements Initializable {
         this.person = person;
     }
     
+    public String getMessage(String key) {
+        return ResourceBundle.getBundle("resources.lang", language).getString(key);
+    }
+    
     public void changeDutch() {
-        this.language = Locale.KOREAN;
+        language = Locale.KOREAN;
         refreshLanguage();
     }
     
     public void changeEnglish() {
-        this.language = Locale.ENGLISH;
+        language = Locale.ENGLISH;
         refreshLanguage();
     }
     

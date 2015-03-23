@@ -46,7 +46,7 @@ public class LoginGUIController implements Initializable {
         if(p.getUsername().equals(tfUsername.getText()) && p.getPassword().equals(pwPassword.getText())) {
             this.mainGUI.goToTabs();
         } else {
-            JOptionPane.showMessageDialog(null, "%incorrectSignin");
+            JOptionPane.showMessageDialog(null, mainGUI.getMessage("incorrectSignin"));
         }
     }
     

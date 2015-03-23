@@ -40,13 +40,13 @@ public class WachtwoordWijzigenController {
     {
         try {
             if(pwOldPassword.getText().isEmpty() || pwNewPassword.getText().isEmpty() || pwRepeatPassword.getText().isEmpty()) {
-                throw new IllegalArgumentException("%incomplete");
+                throw new IllegalArgumentException(mainGUI.getMessage("incomplete"));
             }
             if(!pwOldPassword.getText().equals(mainGUI.getPerson().getPassword())) {
-                throw new IllegalArgumentException("%incorrectPassword");
+                throw new IllegalArgumentException(mainGUI.getMessage("incorrectPassword"));
             }
             if(!pwNewPassword.getText().equals(pwRepeatPassword.getText())) {
-                throw new IllegalArgumentException("%passwordEx");
+                throw new IllegalArgumentException(mainGUI.getMessage("passwordEx"));
             }
             
             mainGUI.getPerson().setPassword(pwNewPassword.getText());

@@ -46,10 +46,10 @@ public class RegisterGUIController implements Initializable {
     {
         try {
             if(tfUsername.getText().isEmpty() || pwPassword.getText().isEmpty() || pwRepeatPassword.getText().isEmpty()) {
-                throw new IllegalArgumentException("%incomplete");
+                throw new IllegalArgumentException(mainGUI.getMessage("incomplete"));
             }
             if(!pwPassword.getText().equals(pwRepeatPassword.getText())) {
-                throw new IllegalArgumentException("%passwordsEx");
+                throw new IllegalArgumentException(mainGUI.getMessage("passwordsEx"));
             }
             
             mainGUI.setPerson(new Person(tfUsername.getText(), pwPassword.getText()));
