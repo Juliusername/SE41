@@ -29,19 +29,19 @@ public class ChangeCarGUIController implements Initializable {
     @FXML Button BTreturnmenu;
     @FXML Button Btaddcar;
     @FXML Button Btremovecar;
+    @FXML Button BTupdatecar;
     @FXML TextField TFbrand;
     @FXML TextField TFtype;
     @FXML TextField TFfuealusage;
     
     private Car car;
     
+    
     /**
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        this.LVcarlist.getItems().add("Chevrolet Kalos");
-        car = new Car(null,null,0);
+    public void initialize(URL url, ResourceBundle rb) {    
     }    
     
     public void Gotoinstellingen()
@@ -51,6 +51,7 @@ public class ChangeCarGUIController implements Initializable {
     
     public void setValues(MainGUIController mainGUI) {
         this.mainGUI = mainGUI;
+        RefreshListview();
     }
     
     public void AddCar()
@@ -62,8 +63,13 @@ public class ChangeCarGUIController implements Initializable {
             {
                 if(!"".equals(TFfuealusage.getText()))
                 {
-                   car.Addcar(new Car(this.TFbrand.getText(),this.TFtype.getText(),Integer.parseInt(this.TFfuealusage.getText())));
-                   this.LVcarlist.setItems(FXCollections.observableList(car.getCars()));
+                   this.mainGUI.getCars().add(car = new Car(this.TFbrand.getText(),this.TFtype.getText(),Integer.parseInt(this.TFfuealusage.getText())));
+                   this.mainGUI.getPerson().setCar(car);
+                   this.TFbrand.setText("");
+                   this.TFtype.setText("");
+                   this.TFfuealusage.setText("");
+                   this.RefreshListview();
+                   this.LVcarlist.getSelectionModel().clearSelection(0);
                 }
                 else
                 {
@@ -83,12 +89,77 @@ public class ChangeCarGUIController implements Initializable {
     
     public void RemoveCar()
     {
-        
+       Car oldcar = null;
+       for(Car temp: this.mainGUI.getCars())
+       {
+           if(temp == this.LVcarlist.getSelectionModel().getSelectedItem())
+           {
+               oldcar = temp;
+           }
+       }
+       
+       if(oldcar != null)
+       {
+           this.mainGUI.getCars().remove(oldcar);
+           this.mainGUI.getPerson().setCar(null);
+           this.RefreshListview();
+       }
     }
     
     public void UpdateCar()
     {
+        if(!this.TFbrand.getText().equals("") && !this.TFtype.getText().equals("") && !this.TFfuealusage.getText().equals(""))
+        {    
+
+        for(Car temp : this.mainGUI.getCars())
+        {
+            if(temp == this.LVcarlist.getSelectionModel().getSelectedItem())
+            {
+            this.RemoveCar();
+            this.AddCar();
+            }
+        }
+        this.RefreshListview(); 
+        }
+    }
+    
+    private void RefreshListview()
+    {
+        if(this.mainGUI.getCars() != null)
+        {
+            this.LVcarlist.setItems(FXCollections.observableList(this.mainGUI.getCars()));
+            if (this.mainGUI.getCars().size() > 0) {
+                this.Btaddcar.setDisable(true);
+                this.Btremovecar.setDisable(false);
+                this.BTupdatecar.setDisable(false);
+            }
+            else
+            {
+                this.Btaddcar.setDisable(false);
+                this.Btremovecar.setDisable(true);
+                this.BTupdatecar.setDisable(true);
+            }
+        }
+        this.LVcarlist.getSelectionModel().clearSelection();
         
+    }
+    
+    public void Setfields()
+    {
+       Car oldcar = null;
+       for(Car temp: this.mainGUI.getCars())
+       {
+           if(temp == this.LVcarlist.getSelectionModel().getSelectedItem())
+           {
+               oldcar = temp;
+           }
+       }
+        if(oldcar != null)
+        {
+        this.TFbrand.setText(oldcar.getBrand());
+        this.TFtype.setText(oldcar.getType());
+        this.TFfuealusage.setText(oldcar.getFuelusage() + "");
+        }
     }
     
 }

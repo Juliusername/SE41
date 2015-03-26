@@ -10,6 +10,7 @@ import fuelsaver.LoginGUIController;
 import java.awt.Desktop;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -35,6 +36,7 @@ public class MainGUIController implements Initializable {
     private Scenes currentScene;
     
     private Person person;
+    private ArrayList<Car> Cars = new ArrayList<Car>();
     
     /**
      * Initializes the controller class.
@@ -44,7 +46,12 @@ public class MainGUIController implements Initializable {
         this.language = Locale.KOREAN;
         goToLogin();
         this.person = new Person();
-    }   
+    }
+    
+    public ArrayList<Car> getCars()
+    {
+        return this.Cars;
+    }
     
     public Person getPerson() {
         return this.person;
