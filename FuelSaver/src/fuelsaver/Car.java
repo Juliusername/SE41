@@ -92,6 +92,6 @@ public class Car {
     @Override
     public String toString()
     {
-      return "Brand: " + this.getBrand() + "Type: " + this.getType() + "Fuelusage: " + this.getFuelusage();
+      return "Brand: " + this.getBrand() + " Type: " + this.getType() + " Fuelusage: " + this.getFuelusage();
     }
 }

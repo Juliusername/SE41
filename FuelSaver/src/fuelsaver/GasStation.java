@@ -88,7 +88,7 @@ public class GasStation {
     @Override
     public String toString()
     {
-      return "Name: " + this.getGasStationname() + "Location: " + this.getGasStationlocation() + "Price: " + this.getGasStationprice();
+      return "Name: " + this.getGasStationname() + " Location: " + this.getGasStationlocation() + " Price: " + this.getGasStationprice();
     }
     
 }

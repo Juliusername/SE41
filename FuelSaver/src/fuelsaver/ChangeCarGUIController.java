@@ -41,6 +41,7 @@ public class ChangeCarGUIController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         this.LVcarlist.getItems().add("Chevrolet Kalos");
+        car = new Car(null,null,0);
     }    
     
     public void Gotoinstellingen()
@@ -55,13 +56,13 @@ public class ChangeCarGUIController implements Initializable {
     public void AddCar()
     {
         
-        if(TFbrand.getText() != null)
+        if(!"".equals(TFbrand.getText()))
         {
-            if(TFtype.getText() != null)
+            if(!"".equals(TFtype.getText()))
             {
-                if(TFfuealusage.getText() != null)
+                if(!"".equals(TFfuealusage.getText()))
                 {
-                   car = new Car(this.TFbrand.getText(),this.TFtype.getText(),Integer.parseInt(this.TFfuealusage.getText()));
+                   car.Addcar(new Car(this.TFbrand.getText(),this.TFtype.getText(),Integer.parseInt(this.TFfuealusage.getText())));
                    this.LVcarlist.setItems(FXCollections.observableList(car.getCars()));
                 }
                 else
