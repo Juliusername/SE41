@@ -16,11 +16,11 @@
     <TextField fx:id="TFtankstationname" layoutX="198.0" layoutY="130.0" prefWidth="143.0" />
     <TextField fx:id="TFtanksationlocation" layoutX="198.0" layoutY="167.0" prefWidth="143.0" />
     <TextField fx:id="TFtankstationprice" layoutX="198.0" layoutY="201.0" prefWidth="143.0" />
-    <Button id="Btaddcar" fx:id="BTaddgasstation" layoutX="199.0" layoutY="240.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="143.0" text="%addgasstation" />
-    <ListView id="LVcarlist" fx:id="LVgasstations" layoutX="354.0" layoutY="127.0" prefHeight="95.00009999999747" prefWidth="200.0" />
+    <Button id="Btaddcar" fx:id="BTaddgasstation" layoutX="199.0" layoutY="240.0" mnemonicParsing="false" onAction="#AddGasStation" prefHeight="32.0" prefWidth="143.0" text="%addgasstation" />
+    <ListView id="LVcarlist" fx:id="LVgasstations" layoutX="354.0" layoutY="127.0" onMouseClicked="#Setfields" prefHeight="95.00009999999747" prefWidth="200.0" />
     <Label fx:id="LBremovegasstation" layoutX="354.0" layoutY="99.0" text="%tankstationremove" />
     <Label id="LBTitel" fx:id="LBgasstationconfiguration" layoutX="46.0" layoutY="50.0" text="%gasstationconfigstation" />
-    <Button id="Btaddcar" fx:id="BTremovegasstation" layoutX="354.0" layoutY="241.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="200.0" text="%tankstationremove" />
-    <Button id="BTupdatecar" fx:id="BTupdategasstation" layoutX="46.0" layoutY="241.0" mnemonicParsing="false" prefHeight="32.0" text="%tankstationupdate" />
+    <Button id="Btaddcar" fx:id="BTremovegasstation" layoutX="354.0" layoutY="241.0" mnemonicParsing="false" onAction="#RemoveGasStation" prefHeight="32.0" prefWidth="200.0" text="%tankstationremove" />
+    <Button id="BTupdatecar" fx:id="BTupdategasstation" layoutX="46.0" layoutY="241.0" mnemonicParsing="false" onAction="#UpdateGasStation" prefHeight="32.0" text="%tankstationupdate" />
   </children>
 </AnchorPane>

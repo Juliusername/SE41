@@ -73,17 +73,17 @@ public class ChangeCarGUIController implements Initializable {
                 }
                 else
                 {
-                    JOptionPane.showMessageDialog(null, "%No Fuealusage");
+                    JOptionPane.showMessageDialog(null, this.mainGUI.getMessage("nocarfuelusage"));
                 }
             }
             else
             {
-                JOptionPane.showMessageDialog(null, "%No type");
+                JOptionPane.showMessageDialog(null, this.mainGUI.getMessage("nocartype"));
             }        
         }
         else
         {
-            JOptionPane.showMessageDialog(null, "%No brand");
+            JOptionPane.showMessageDialog(null, this.mainGUI.getMessage("nocarbrand"));
         }
     }
     
@@ -161,5 +161,4 @@ public class ChangeCarGUIController implements Initializable {
         this.TFfuealusage.setText(oldcar.getFuelusage() + "");
         }
     }
-    
 }
