@@ -23,6 +23,7 @@ import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -33,10 +34,15 @@ public class MainGUIController implements Initializable {
     public AnchorPane apContent;
     
     private Locale language;
-    private Scenes currentScene;
+    private Scenes currentScene; 
     
     private Person person;
     private ArrayList<Car> Cars = new ArrayList<Car>();
+    
+    //Voor overviewgui
+    private String beginPosition;
+    private String endPosition;
+    private boolean ov;
     
     /**
      * Initializes the controller class.
@@ -90,7 +96,7 @@ public class MainGUIController implements Initializable {
                 goToChangeGasStations();
                 break;
             case OVERVIEW:
-                goToOverview();
+                goToOverview(this.beginPosition, this.endPosition, this.ov);
                 break;
             case REGISTER:
                 goToRegister();
@@ -147,11 +153,31 @@ public class MainGUIController implements Initializable {
         ((ChangeGasStationsGUIController) fxmlLoader.getController()).setValues(this);
     }
     
-    public void goToOverview() {
-        this.currentScene = Scenes.OVERVIEW;
-        //this.apContent.getScene().
-        FXMLLoader fxmlLoader = this.replaceContent("OverviewGUI.fxml");
-        ((OverviewGUIController) fxmlLoader.getController()).setValues(this);
+    public void goToOverview(String beginPosition, String endPosition, boolean ov) {
+        this.beginPosition = beginPosition;
+        this.endPosition = endPosition;
+        this.ov = ov;
+        if(person.getCar() != null)
+        {
+            if(!this.beginPosition.equals("") && !this.endPosition.equals(""))
+            {
+                this.currentScene = Scenes.OVERVIEW;
+                this.beginPosition = beginPosition;
+                this.endPosition = endPosition;
+                this.ov = ov;
+
+                FXMLLoader fxmlLoader = this.replaceContent("OverviewGUI.fxml");
+                ((OverviewGUIController) fxmlLoader.getController()).setValues(this, this.beginPosition, this.endPosition, this.ov);
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null, this.getMessage("missingPosition"));
+            }
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, this.getMessage("needCarWarning"));
+        }
     }
     
     public void goToRegister() {

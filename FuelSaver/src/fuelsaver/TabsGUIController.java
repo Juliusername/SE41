@@ -108,6 +108,6 @@ public class TabsGUIController implements Initializable {
     }
     
     public void calculate() {
-        this.mainGUI.goToOverview();
+        this.mainGUI.goToOverview(tfStartPosition.getText(), tfEndPosition.getText(), chbCompare.isSelected());
     }
 }
